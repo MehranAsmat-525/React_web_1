@@ -1,0 +1,130 @@
+.container_movies {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 26px;
+    padding: 33px;
+}
+.api_btn{
+    color: white;
+}
+.menu_category {
+    margin-top: 22px;
+}
+.box_movies {
+    height: 470px;
+    background-color: rgb(105, 103, 103);
+    color: wheat;
+    border-radius: 15px;
+    padding: 4px;
+}
+
+.box_movies img {
+    width: 90%;
+    height: 58%;
+}
+
+.box_movies .price {
+    margin-right: 12px;
+}
+
+h3 {
+    margin: 4px 0;
+}
+.para_movies{
+    margin-bottom: 16px;
+}
+/* Responsive Styles */
+@media only screen and (max-width: 823px) {
+    .container_movies {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .menu_category {
+        background-color: black;
+        height: 120px;
+        position: sticky;
+        top: 120px;
+        /* background-color: black; */
+    }
+    .menu_category ul {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        margin-bottom: 99px;
+        grid-gap: 8px;
+        padding: 0 22px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container_movies {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+    }
+
+    .box_movies {
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .box_movies img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container_movies {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .box_movies {
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .box_movies img {
+        width: 100%;
+        height: auto;
+    }
+    .menu_category {
+        background-color: black;
+        height: 160px;
+        /* border: 2px solid red; */
+        position: sticky;
+        top: 120px;
+        /* background-color: black; */
+    }
+    .menu_category ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 99px;
+        grid-gap: 8px;
+        padding: 0 22px;
+    }
+    .menu_category li {
+        text-align: left;
+    }
+    .menu_category ul button {
+        color: white;
+        padding: 7px;
+    }
+
+    /* Show first three buttons in one row */
+    .menu_category li:nth-child(-n + 3) {
+        flex-basis: 100%; /* Set the width to 100% for the first three items */
+    }
+
+    @media (max-width: 772px) {
+        .menu_category ul {
+            flex-basis: 50%; /* Set the width to 50% for two items per row on smaller devices */
+            /* border: 2px solid red; */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .menu_category li {
+            flex-basis: 100%; /* Set the width to 100% for one item per row on smaller devices */
+        }
+    }
+}

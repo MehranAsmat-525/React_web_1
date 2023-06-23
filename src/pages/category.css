@@ -1,0 +1,13 @@
+.menu_category ul{
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+    height: 53px;
+}
+.menu_category ul li{
+    list-style: none;
+}
+.menu_category button{
+    border: none;
+}

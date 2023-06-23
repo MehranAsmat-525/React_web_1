@@ -1,0 +1,109 @@
+* {
+    text-align: center;
+}
+
+.heading {
+    margin-top: 22px;
+}
+
+.grid_services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 26px;
+    margin: 22px auto;
+    justify-content: center;
+    align-items: center;
+    padding: 44px;
+}
+
+.box {
+    background-color: rgba(77, 75, 75, 0.9);
+    height: 390px;
+    border-radius: 15px;
+    padding: 24px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.grid_services .box img {
+    width: 100%;
+    height: auto;
+    max-height: 60%;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #c08c08;
+    color: #1a237e;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e1c265;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 1150px) {
+    .grid_services {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .img_services{
+        /* border: 2px solid red; */
+        height: 400px;
+        padding-top: 22px;
+        height: 230px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .grid_services {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+    }
+
+    .box {
+        height: 360px;
+        padding: 16px;
+    }
+
+    .grid_services .box img {
+        padding-top:22px ;
+        /* max-height: 50%; */
+        margin-bottom: 12px;
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .grid_services {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .box {
+        height: auto;
+        padding: 12px;
+    }
+
+    .grid_services .box img {
+        max-height: 40%;
+        margin-bottom: 10px;
+    }
+
+    .serv_btn {
+        font-size: 15px;
+    }
+}
